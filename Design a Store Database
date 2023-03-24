@@ -1,14 +1,14 @@
 CREATE TABLE Furniture (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, color TEXT);
 
 INSERT INTO Furniture VALUES (1, "Dining Chair", 6, 40, "dark brown");
-INSERt INTO Furniture VALUES (2, "Dining Table", 2, 100, "dark brown");
+INSERT INTO Furniture VALUES (2, "Dining Table", 2, 100, "dark brown");
 INSERT INTO Furniture VALUES (3, "Sofa", 1, 200, "blue");
 INSERT INTO Furniture VALUES (4, "Accent Chair", 4, 125, "grey");
 INSERT INTO Furniture VALUES (5, "Book Shelf", 2, 75, "light brown");
 INSERT INTO Furniture VALUES (6, "Bed Frame", 1, 150, "Black Metal");
 INSERT INTO Furniture VALUES (7, "Side Table", 2, 40, "brown");
 INSERT INTO Furniture VALUES (8, "Coffee Table", 1, 50, "white");
-Insert INTO Furniture VALUES (9, "Recliner", 3, 175, "tan");
+INSERT INTO Furniture VALUES (9, "Recliner", 3, 175, "tan");
 INSERT INTO Furniture VALUES (10, "Large Rug", 3, 150, "multi-colored");
 INSERT INTO Furniture VALUES (11, "Small Rug", 5, 50, "mulit-colored");
 INSERT INTO Furniture VALUES (12, "Medium Rug", 4, 110, "multi-colored");
