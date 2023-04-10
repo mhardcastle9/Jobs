@@ -1,0 +1,43 @@
+CREATE TABLE movie_stars (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fullname TEXT,
+    age INTEGER);
+    
+INSERT INTO movie_stars (fullname, age) VALUES ("Kurt Russell", 72);
+INSERT INTO movie_stars (fullname, age) VALUES ("Goldie Hawn", 77);
+INSERT INTO movie_stars (fullname, age) VALUES ("Kristen Bell", 42);
+INSERT INTO movie_stars (fullname, age) VALUES ("Dax Shepard", 48);
+INSERT INTO movie_stars (fullname, age) VALUES ("Sofia Vergara", 50);
+INSERT INTO movie_stars (fullname, age) VALUES ("Joe Manganiello", 46);
+
+CREATE TABLE movies (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT,
+    moviestar_id INTEGER);
+    
+INSERT INTO movies (title, moviestar_id) VALUES ("Overboard", 1);
+INSERT INTO movies (title, moviestar_id) VALUES ("Overboard", 2);
+INSERT INTO movies (title, moviestar_id) VALUES ("Hit and Run", 3);
+INSERT INTO movies (title, moviestar_id) VALUES ("Hit and Run", 4);
+INSERT INTO movies (title, moviestar_id) VALUES ("Bottom of the 9th", 5);
+INSERT INTO movies (title, moviestar_id) VALUES ("Bottom of the 9th", 6);
+
+CREATE TABLE spouse (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    person1_id INTEGER,
+    person2_id INTEGER);
+    
+INSERT INTO spouse (person1_id, person2_id) VALUES (1,2);
+INSERT INTO spouse (person1_id, person2_id) VALUES (3,4);
+INSERT INTO spouse (person1_id, person2_id) VALUES (5,6);
+
+
+SELECT movie_stars.fullname AS actor_actress, movies.title AS movie_title FROM movies
+    JOIN movie_stars
+    ON movie_stars.id = movies.moviestar_id;
+    
+SELECT a.fullname, b.fullname AS spouse FROM spouse
+    JOIN movie_stars a
+    ON spouse.person1_id = a.id
+    JOIN movie_stars b
+    ON spouse.person2_id = b.id;
